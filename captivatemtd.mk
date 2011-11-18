@@ -42,8 +42,10 @@ DEVICE_PACKAGE_OVERLAYS := device/samsung/aries-common/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES = \
+	device/samsung/captivatemtd/asound.conf:system/etc/asound.conf \
 	device/samsung/aries-common/vold.fstab:system/etc/vold.fstab \
-	device/samsung/aries-common/egl.cfg:system/lib/egl/egl.cfg
+	device/samsung/aries-common/egl.cfg:system/lib/egl/egl.cfg \
+	device/samsung/aries-common/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -86,7 +88,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	lights.aries \
 	overlay.aries \
-	sensors.aries
+	sensors.aries \
+	audio.primary.aries \
+	audio_policy.aries
 
 # Libs
 PRODUCT_PACKAGES += \
@@ -105,7 +109,7 @@ PRODUCT_PACKAGES += \
 
 # apns config file
 PRODUCT_COPY_FILES += \
-        vendor/cyanogen/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+        device/samsung/aries-common/apns-conf.xml:system/etc/apns-conf.xml
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -134,6 +138,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
        wifi.interface=eth0 \
        wifi.supplicant_scan_interval=20 \
        ro.telephony.ril_class=samsung \
+       ro.telephony.ril.v3=1 \
        mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
        dalvik.vm.heapsize=32m
 
