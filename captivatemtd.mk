@@ -155,6 +155,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     dalvik.vm.checkjni=false \
+    persist.sys.strictmode.visual=0 \
     persist.sys.vold.switchexternal=1
 
 # we have enough storage space to hold precise GC data
