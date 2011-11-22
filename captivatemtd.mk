@@ -50,6 +50,7 @@ PRODUCT_COPY_FILES = \
 # Init files
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/init.aries.rc:root/init.aries.rc \
+        device/samsung/aries-common/init.aries.usb.rc:root/init.aries.usb.rc \
 	device/samsung/aries-common/lpm.rc:root/lpm.rc \
 	device/samsung/aries-common/ueventd.aries.rc:root/ueventd.aries.rc \
 	device/samsung/aries-common/setupenv.sh:recovery/root/sbin/setupenv.sh
@@ -157,6 +158,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.checkjni=false \
     persist.sys.strictmode.visual=0 \
     persist.sys.vold.switchexternal=1
+
+# Set default USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
