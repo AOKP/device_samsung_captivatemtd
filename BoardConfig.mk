@@ -17,7 +17,10 @@
 # Product-specific compile-time definitions.
 #
 
-# Import the aries-common BoardConfigCommon.mk
-include device/samsung/aries-common/BoardConfigCommon.mk
+# Prebuilt Kernel
+TARGET_PREBUILT_KERNEL := device/samsung/captivatemtd/kernel
 
 TARGET_OTA_ASSERT_DEVICE := captivate,captivatemtd,SGH-I896,SGH-I897
+
+# Import the aries-common BoardConfigCommon.mk
+include device/samsung/aries-common/BoardConfigCommon.mk
