@@ -23,7 +23,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, device/samsung/captivatemtd/captivatemtd.mk)
+$(call inherit-product, device/samsung/captivatemtd/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
 # Captivate uses high-density artwork where available
