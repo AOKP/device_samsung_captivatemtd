@@ -17,6 +17,9 @@
 # Product-specific compile-time definitions.
 #
 
+# Inline Kernel Source
+TARGET_KERNEL_CONFIG := cyanogenmod_captivatemtd_defconfig
+
 # Prebuilt Kernel
 TARGET_PREBUILT_KERNEL := device/samsung/captivatemtd/kernel
 
